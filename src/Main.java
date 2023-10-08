@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         task1_2();
         task3();
-        //task4();
+        task4();
     }
 
     public static void task1_2() {
@@ -54,8 +54,32 @@ public class Main {
                 System.out.print(", ");
             }
         }
-
-
+        System.out.println();
     }
 
+    public static void task4() {
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.print("Исходный массив: ");
+        printArray(array);
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 != 0) {
+                array[i] += 1;
+            }
+        }
+
+        System.out.print("Преобразованный массив: ");
+        printArray(array);
+    }
+
+    public static void printArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length - 1; i++) {
+            System.out.print(array[i] + ", ");
+        }
+        System.out.println(array[array.length - 1] + "]");
+    }
 }
+
+
